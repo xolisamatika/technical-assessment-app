@@ -1,0 +1,10 @@
+version: '2'
+services:
+    technical-assessment-app:
+        container_name: technical-assessment-app
+        build:
+            context: docker-app-server
+            dockerfile: Dockerfile
+        image: technical-assessment-app:latest
+        ports:
+            - 8080:8080

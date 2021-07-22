@@ -4,7 +4,7 @@
 
 * running tests :
 
-`mvn clean install`
+`./mvnw clean install`
 
 ## Compile and run the application
 
@@ -18,9 +18,12 @@
 docker build -t technical-assessment-app  .
 ```
 
-- Run the docker container
+- Make sure port 8080 is not being used, then run the docker container
 ```
 docker run -p 8080:8080 technical-assessment-app
 ```
 
-- Make sure port 8080 is not being used
+- Run the following command to hit the api 
+```
+curl -X GET localhost:8080/directories
+```
